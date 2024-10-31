@@ -3,6 +3,7 @@ import { ShoppingCartEmpty } from '../../assets/Icons/cart-empty';
 import { useContext } from 'react';
 import { ShoppingCartContext } from '../../Context';
 import { ShoppingCartFull } from '../../assets/Icons/cart-full';
+import PropTypes from 'prop-types';
 
 const NAVBAR_LEFT = [
   {
@@ -44,6 +45,11 @@ const NavbarLink = ({ to, text }) => {
       </NavLink>
     </li>
   );
+};
+
+NavbarLink.propTypes = {
+  to: PropTypes.string.isRequired,
+  text: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
 };
 
 const Navbar = () => {
