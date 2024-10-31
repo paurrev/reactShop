@@ -1,0 +1,1 @@
+export const apiURL = 'https://api.escuelajs.co/api/v1';
