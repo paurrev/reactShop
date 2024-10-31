@@ -1,6 +1,6 @@
 import { useFetch } from '../../Components/Api';
 import Card from '../../Components/Cards';
-import Layout from '../../Components/Layout';
+import Layout from '../../Components/Layout/index';
 
 function Home() {
   const {
