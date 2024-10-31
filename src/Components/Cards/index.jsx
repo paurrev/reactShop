@@ -4,7 +4,12 @@ import { ShoppingCartEmpty } from '../../assets/Icons/cart-empty';
 import { ShoppingCartContext } from '../../Context';
 import PropTypes from 'prop-types';
 
-const Card = ({ category, title, price, image }) => {
+const Card = ({
+  category = '',
+  title = '',
+  price = 0,
+  image = 'src/assets/teddy-fine.webp',
+}) => {
   const [coverImageError, setCoverImageError] = useState(false);
   const { countCart, setCountCart } = useContext(ShoppingCartContext);
 
@@ -55,14 +60,6 @@ Card.propTypes = {
   title: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   image: PropTypes.string.isRequired,
-};
-
-// Opcionalmente, puedes agregar defaultProps
-Card.defaultProps = {
-  category: '',
-  title: '',
-  price: 0,
-  image: 'src/assets/teddy-fine.webp',
 };
 
 export default Card;

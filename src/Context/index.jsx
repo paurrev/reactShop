@@ -18,8 +18,4 @@ ShoppingCartProvider.propTypes = {
   children: propTypes.node.isRequired,
 };
 
-ShoppingCartProvider.defaultProps = {
-  children: null,
-};
-
 export { ShoppingCartContext, ShoppingCartProvider };
